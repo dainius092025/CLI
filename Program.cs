@@ -9,6 +9,7 @@ class Program
             Console.WriteLine("Please remember to enter the command.");
             Console.WriteLine("It must follow this structure:");
             Console.WriteLine("dotnet run 'here goes your command+args'");
+            //Added new comment on new branch
             return;
         }
     }
