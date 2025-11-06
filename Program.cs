@@ -4,6 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        if (args.Length == 0)
+        {
+            Console.WriteLine("Please remember to enter the command.");
+            Console.WriteLine("It must follow this structure:");
+            Console.WriteLine("dotnet run 'here goes your command+args'");
+            return;
+        }
     }
 }
