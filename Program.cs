@@ -1,24 +1,31 @@
 ﻿namespace CliVerktøy;
-
-class Program
+//Adding a flowchart
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         if (args.Length == 0)
         {
             Console.WriteLine("Please remember to enter the command.");
             Console.WriteLine("It must follow this structure:");
-            Console.WriteLine("dotnet run 'here goes your command+args'");
+            Console.WriteLine("dotnet run 'your command'");
             //Added new comment on new branch
             return;
-            string command = args[0];
-            string[] commandArgs = new string[args.Length - 1];
-
-            for (int i = 1; i < args.Length; i++)
-            {
-
-            }
-
         }
+        //assigning a new string variable to args first value
+        string command = args[0];
+        //creating a new string array and assigning the size to one less than args
+        string[] commandArgs = new string[args.Length - 1];
+        // running for loop to populate an "commandArgs" array from args (skipping the first index value as it is our command)
+        for (int i = 1; i < args.Length; i++)
+        {
+            commandArgs[i - 1] = args[i];
+        }
+        if (command == "echo")
+        {
+            CommandEcho.Run(commandArgs);
+        }
+
+
     }
 }
