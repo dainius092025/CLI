@@ -11,6 +11,14 @@ class Program
             Console.WriteLine("dotnet run 'here goes your command+args'");
             //Added new comment on new branch
             return;
+            string command = args[0];
+            string[] commandArgs = new string[args.Length - 1];
+
+            for (int i = 1; i < args.Length; i++)
+            {
+
+            }
+
         }
     }
 }
