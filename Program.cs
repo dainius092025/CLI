@@ -25,6 +25,14 @@ public class Program
         {
             CommandEcho.Run(commandArgs);
         }
+        else if (command == "ls")
+        {
+            CommandLs.Run();
+        }
+        else
+        {
+            Console.WriteLine("Unaxeptable");
+        }
 
 
     }
