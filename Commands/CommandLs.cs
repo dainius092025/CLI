@@ -10,6 +10,7 @@ public class CommandLs
     string currentDir = Environment.CurrentDirectory;
     string[] files = Directory.GetFiles(currentDir);
     string[] folders = Directory.GetDirectories(currentDir);
+    char[] notAllowed = ['.'];
     foreach (string file in files)
     {
       string[] locations = file.Split('\\');
@@ -20,7 +21,10 @@ public class CommandLs
       string[] locations = folder.Split('\\');
       items.Add(locations[^1]);
     }
-    foreach (string item in items.OrderBy(n => n))
+    var newItems = items.OrderBy(n => n)
+                             .Where(x => !notAllowed.Any(b => x.StartsWith(b)))
+                             .ToList();
+    foreach (string item in newItems)
     {
       Console.Write(item + "   ");
     }
