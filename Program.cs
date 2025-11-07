@@ -25,9 +25,13 @@ public class Program
         {
             CommandEcho.Run(commandArgs);
         }
-        else if (command == "ls")
+        else if (command == "Pwd")
         {
             CommandPwd.Run();
+        }
+        else if (command == "cd")
+        {
+            CommandCD.Run(commandArgs);
         }
         else
         {
