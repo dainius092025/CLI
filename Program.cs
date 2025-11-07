@@ -25,6 +25,14 @@ public class Program
         {
             CommandEcho.Run(commandArgs);
         }
+        else if (command == "ls")
+        {
+            CommandPwd.Run();
+        }
+        else
+        {
+            Console.WriteLine("Unknown command: " + command);
+        }
 
 
     }
