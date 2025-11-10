@@ -25,6 +25,18 @@ public class Program
         {
             CommandEcho.Run(commandArgs);
         }
+        else if (command == "cat")
+        {
+            CommandCat.Cat(commandArgs);
+        }
+        else if (command == "rm")
+        {
+            CommandRm.Run(commandArgs);
+        }
+        else
+        {
+            Console.WriteLine("Unknown command" + command);
+        }
 
 
     }
