@@ -37,25 +37,25 @@ public class Program
         {
             CommandCD.Run(commandArgs);
         }
-        else if (command == "head")
+        /*else if (command == "head")
         {
             CommandHead.Run(commandArgs[0]);
-        }
+        }*/
         else if (command == "tail")
         {
             CommandTail.Run(commandArgs[0]);
         }
-        else if (command == "cat")
-        {
-            if (commandArgs.Length > 0)
-            {
-                CommandCat.Run(commandArgs[0]);
-            }
-            else
-            {
-                Console.WriteLine("Please provide a file path.");
-            }
-        }
+        /* else if (command == "cat")
+         {
+             if (commandArgs.Length > 0)
+             {
+                 CommandCat.Run(commandArgs[0]);
+             }
+             else
+             {
+                 Console.WriteLine("Please provide a file path.");
+             }
+         }*/
         else
         {
             Console.WriteLine("Unknown command: " + command);
