@@ -1,4 +1,4 @@
-namespace CliVerktøy;
+/*namespace CliVerktøy;
 
 public class CommandCat
 {
@@ -11,4 +11,4 @@ public class CommandCat
       Console.WriteLine(line);
     }
   }
-}
+}*/
