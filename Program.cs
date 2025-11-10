@@ -25,15 +25,10 @@ public class Program
         {
             CommandEcho.Run(commandArgs);
         }
-<<<<<<< HEAD
         else if (command == "ls")
         {
             CommandLs.Run();
         }
-        else
-        {
-            Console.WriteLine("Unaxeptable");
-=======
         else if (command == "Pwd")
         {
             CommandPwd.Run();
@@ -45,7 +40,6 @@ public class Program
         else
         {
             Console.WriteLine("Unknown command: " + command);
->>>>>>> 64c3e82fc1cb08c0b9512d398b4df2e05c5e203a
         }
 
 
