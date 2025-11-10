@@ -37,6 +37,14 @@ public class Program
         {
             CommandCD.Run(commandArgs);
         }
+        else if (command == "head")
+        {
+            CommandHead.Run(commandArgs[0]);
+        }
+        else if (command == "tail")
+        {
+            CommandTail.Run(commandArgs[0]);
+        }
         else if (command == "cat")
         {
             if (commandArgs.Length > 0)
