@@ -6,7 +6,6 @@ public class CommandLs
   public static void Run()
   {
     List<string> items = new List<string>();
-    Console.WriteLine("this is how far i get");
     string currentDir = Environment.CurrentDirectory;
     string[] files = Directory.GetFiles(currentDir);
     string[] folders = Directory.GetDirectories(currentDir);
