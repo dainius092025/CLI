@@ -25,18 +25,56 @@ public class Program
         {
             CommandEcho.Run(commandArgs);
         }
+        else if (command == "cat")
+        {
+            CommandCat.Cat(commandArgs);
+        }
+        else if (command == "rm")
+        {
+            CommandRm.Run(commandArgs);
+        }
+        
+        else if (command == "ls")
+        {
+            CommandLs.Run();
+        }
         else if (command == "Pwd")
         {
             CommandPwd.Run();
+        }
+        else if (command == "head")
+        {
+            CommandHead.Run(commandArgs);
         }
         else if (command == "cd")
         {
             CommandCD.Run(commandArgs);
         }
+        /*else if (command == "head")
+        {
+            CommandHead.Run(commandArgs[0]);
+        }*/
+        else if (command == "tail")
+        {
+            CommandTail.Run(commandArgs[0]);
+        }
+        /* else if (command == "cat")
+         {
+             if (commandArgs.Length > 0)
+             {
+                 CommandCat.Run(commandArgs[0]);
+             }
+             else
+             {
+                 Console.WriteLine("Please provide a file path.");
+             }
+         }*/
         else
         {
             Console.WriteLine("Unknown command: " + command);
         }
+
+
 
 
     }
