@@ -12,15 +12,11 @@ public class CommandCD
         foreach (string arg in args)
         {
 
-             dir = dir + arg;
+            dir = dir + arg;
         }
 
         Directory.SetCurrentDirectory(dir);
-              Console.WriteLine("Root directory: {0}", Directory.GetDirectoryRoot(dir));
-      Console.WriteLine("Current directory: {0}", Directory.GetCurrentDirectory());
+        Console.WriteLine("Current directory: {0}", Directory.GetCurrentDirectory());
 
-
-    }
-
-
+    }     
 }
