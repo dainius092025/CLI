@@ -42,6 +42,10 @@ public class Program
         {
             CommandPwd.Run();
         }
+        else if (command == "head")
+        {
+            CommandHead.Run(commandArgs);
+        }
         else if (command == "cd")
         {
             CommandCD.Run(commandArgs);
