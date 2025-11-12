@@ -44,6 +44,10 @@ public class Program
         else if (command == "tail")
         {
             CommandTail.Run(commandArgs[0]);
+        } 
+        else if (command == "wc")
+        {
+            CommandWC.Run(commandArgs);
         }
         /* else if (command == "cat")
          {
