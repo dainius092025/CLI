@@ -21,44 +21,50 @@ public class Program
         {
             commandArgs[i - 1] = args[i];
         }
-        if (command == "echo")
+        switch (command)
         {
-            CommandEcho.Run(commandArgs);
-        }
-        else if (command == "ls")
-        {
-            CommandLs.Run();
-        }
-        else if (command == "Pwd")
-        {
-            CommandPwd.Run();
-        }
-        else if (command == "cd")
-        {
-            CommandCD.Run(commandArgs);
-        }
-        /*else if (command == "head")
-        {
-            CommandHead.Run(commandArgs[0]);
-        }*/
-        else if (command == "tail")
-        {
-            CommandTail.Run(commandArgs[0]);
-        }
-        /* else if (command == "cat")
-         {
-             if (commandArgs.Length > 0)
-             {
-                 CommandCat.Run(commandArgs[0]);
-             }
-             else
-             {
-                 Console.WriteLine("Please provide a file path.");
-             }
-         }*/
-        else
-        {
-            Console.WriteLine("Unknown command: " + command);
+            case "echo":
+                CommandEcho.Run(commandArgs);
+                break;
+
+            case "ls":
+                CommandLs.Run();
+                break;
+
+            case "pwd":
+                CommandPwd.Run();
+                break;
+
+            case "cd":
+                CommandCD.Run(commandArgs);
+                break;
+
+            case "head":
+                CommandHead.Run(commandArgs[0]);
+                break;
+
+            case "wc":
+                CommandWC.Run(commandArgs);
+                break;
+
+            case "tail":
+                CommandTail.Run(commandArgs[0]);
+                break;
+
+            case "cat":
+                if (commandArgs.Length > 0)
+                {
+                    CommandCat.Run(commandArgs[0]);
+                }
+                else
+                {
+                    Console.WriteLine("Please provide a file path.");
+                }
+                break;
+
+            default:
+                Console.WriteLine("Unknown command : " + command);
+                break;
         }
 
 

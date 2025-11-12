@@ -1,4 +1,4 @@
-/*using System.Diagnostics.Contracts;
+using System.Diagnostics.Contracts;
 
 namespace CliVerktøy;
 
@@ -12,4 +12,4 @@ public class CommandHead
       Console.WriteLine(lines[i]);
     }
   }
-}/*
+}
