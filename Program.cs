@@ -25,6 +25,15 @@ public class Program
         {
             CommandEcho.Run(commandArgs);
         }
+        else if (command == "cat")
+        {
+            CommandCat.Cat(commandArgs);
+        }
+        else if (command == "rm")
+        {
+            CommandRm.Run(commandArgs);
+        }
+        
         else if (command == "ls")
         {
             CommandLs.Run();
@@ -32,6 +41,10 @@ public class Program
         else if (command == "Pwd")
         {
             CommandPwd.Run();
+        }
+        else if (command == "head")
+        {
+            CommandHead.Run(commandArgs);
         }
         else if (command == "cd")
         {
