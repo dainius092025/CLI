@@ -20,8 +20,12 @@ public class FileHelper
     }
     //if nothing then nothing
     else
-    {
-      Console.WriteLine($"File does nt exsist: " + filePath);
+    {// if file does not exists it prints a message and handles the error.
+      if (!File.Exists(filePath))
+      {
+        Console.Error.WriteLine($"head: cannot open '{filePath}' for reading: No such file or directory");
+        Environment.Exit(1);
+      }
     }
     return lines;
   }
